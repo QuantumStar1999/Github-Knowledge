@@ -15,8 +15,7 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                 push: true
-                repository: ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_REPO_NAME }}
-                tag: sample
+                tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_REPO_NAME }}:sample
                 
     build-and-push-image:
         runs-on: ubuntu-latest 
