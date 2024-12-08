@@ -16,7 +16,7 @@ jobs:
               with:
                 push: true
                 repository: ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_REPO_NAME }}
-                tags: sample
+                tag: sample
                 
     build-and-push-image:
         runs-on: ubuntu-latest 
