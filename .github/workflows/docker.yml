@@ -12,10 +12,11 @@ jobs:
                 username: ${{ secrets.DOCKERHUB_USERNAME }}
                 password: ${{ secrets.DOCKERHUB_PASSWORD }}
             - name: Push to docker Hub
-              uses: docker/build-push-action@v1
+              uses: docker/build-push-action@v6
               with:
                 push: true
-                tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_REPO_NAME }}:sample
+                repository: ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_REPO_NAME }}
+                tags: sample
                 
     build-and-push-image:
         runs-on: ubuntu-latest 
